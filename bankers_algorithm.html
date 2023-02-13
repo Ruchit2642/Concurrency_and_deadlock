@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banker's Algorithm</title>
+    <link rel="stylesheet" href="bankers_algorithm_info.css" />
+    <link rel="icon" href="images/logo1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/61820eb66c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Deadlock And Concurrency</a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="menu">
+        <li><a href="#page_top" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu();">About</a></li>
+        <li><a href="index.html" onclick="toggleMenu();">Algorithms</a></li>
+      </ul>
+    </header>
+
+    <section class="info" id="page_top">
+      <h1>Banker's Algorithm</h1>
+      <h2>Introduction:</h2>
+      <p>
+        Bankers algorithm is an algorithm which is used for deadlock avoidance
+        and resource allocation. It was established by Edsger Dijkstra. The
+        reason behind the name <strong>'banker's algorithm'</strong> is that it
+        is mostly used in banking systems. Banker's algorithm helps to identify
+        whether a loan should be provided or not. The
+        <strong>'S-State'</strong> examines all possible tests or activities
+        before deciding whether the allocation should be allowed to each
+        process. It also helps the operating system to successfully share the
+        resources between all the processes. When a new process is created in a
+        computer system, the process must provide all types of information to
+        the operating system like upcoming processes, requests for their
+        resources, counting them, and delays. Based on these criteria, the
+        operating system decides which process sequence should be executed or
+        waited so that no deadlock occurs in a system. Therefore, it is also
+        known as <strong> deadlock avoidance algorithm</strong> or
+        <strong>deadlock detection in the operating system</strong> .
+      </p>
+
+      <h2>Characteristics of Banker's Algorithms:</h2>
+      <ul>
+        <li>If a process demands the resources, then it has to wait.</li>
+        <li>
+          Banker's algorithm consists of advanced features for maximum resource
+          allocation.
+        </li>
+        <li>
+          In the banker's algorithm, various resources are maintained that
+          fulfill the needs of at least one client.
+        </li>
+        <li>In the system, we have limited resources.</li>
+        <li>
+          In the banker's algorithm, if the process gets all the needed
+          resources, then it is must to return the resources in a restricted
+          period.
+        </li>
+      </ul>
+
+      <h2>Advantages:</h2>
+      <ul>
+        <li>
+          It contains various resources that meet the requirements of each
+          process.
+        </li>
+        <li>
+          Each process should provide information to the operating system for
+          upcoming resource requests, the number of resources, and how long the
+          resources will be held.
+        </li>
+        <li>
+          It helps the operating system manage and control process requests for
+          each type of resource in the computer system.
+        </li>
+        <li>
+          The algorithm has a Max resource attribute that represents indicates
+          each process can hold the maximum number of resources in a system.
+        </li>
+      </ul>
+
+      <h2>Disadvantages:</h2>
+      <ul>
+        <li>
+          It requires a fixed number of processes, and no additional processes
+          can be started in the system while executing the process.
+        </li>
+        <li>
+          The algorithm does no longer allows the processes to exchange its
+          maximum needs while processing its tasks.
+        </li>
+        <li>
+          Each process has to know and state their maximum resource requirement
+          in advance for the system.
+        </li>
+        <li>
+          The number of resource requests can be granted in a finite time, but
+          the time limit for allocating the resources is one year.
+        </li>
+      </ul>
+
+      <h2>
+        Data structures terms applied in the banker's algorithm as follows:
+      </h2>
+      <p>
+        Suppose n is the number of processes, and m is the number of each type
+        of resource used in a computer system.
+      </p>
+      <ul>
+        <li>
+          <strong>Available: </strong> It is an array of length 'm' that defines
+          each type of resource available in the system. When Available[j] = K,
+          means that 'K' instances of Resources type R[j] are available in the
+          system.
+        </li>
+        <br />
+        <li>
+          <strong>Max : </strong>It is a [n x m] matrix that indicates each
+          process P[i] can store the maximum number of resources R[j] (each
+          type) in a system.
+        </li>
+        <br />
+        <li>
+          <strong>Allocation : </strong>It is a matrix of m x n orders that
+          indicates the type of resources currently allocated to each process in
+          the system. When Allocation [i, j] = K, it means that process P[i] is
+          currently allocated K instances of Resources type R[j] in the system.
+        </li>
+        <br />
+        <li>
+          <strong>Need : </strong>It is an M x N matrix sequence representing
+          the number of remaining resources for each process. When the Need[i]
+          [j] = k, then process P[i] may require K more instances of resources
+          type Rj to complete the assigned work. Need[i][j] = Max[i][j] -
+          Allocation[i][j].
+        </li>
+        <br />
+
+      
+      </ul>
+    </section>
+
+    
+
+    <a href="./Bankers-Algorithm/banker.html"><button class="btn">Demo</button></a>
+    
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

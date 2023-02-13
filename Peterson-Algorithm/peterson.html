@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="peterson.css">
+    <link rel="stylesheet" href="../peterson_info.css">
+    <link rel="icon" href="images/logo1.png" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/61820eb66c.js" crossorigin="anonymous"></script>
+    
+</head>
+<header>
+    <a href="#" class="logo">OS Lab</a>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <ul class="menu">
+      <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu();">About</a></li>
+      <li><a href="#alogorithms" onclick="toggleMenu();">Algorithms</a></li>
+      
+    </ul>
+  </header>
+
+<body>
+   
+    <section class="info">
+
+        <div class="container">
+            <div class="heading row">
+                <div class="center col-md-6 col-sm-6">
+                    <h1>Peterson's Algorithm Simulator</h1>
+                </div>
+            </div>
+        </div>
+        <div id="processCon">
+            <div id="stage">
+                <span
+                    style="height:35px; width: 100%; display: flex; padding-top: 10px;justify-content: center; font-size: auto;  background-color: #a7a4a4;">PROCESS</span>
+            </div>
+            <div id="entry">
+                <span
+                    style="height:35px; width: 100%; display: flex; padding-top: 10px;justify-content: center; font-size: auto;  background-color: #a7a4a4;">ENTRY</span>
+            </div>
+            <div id="critical">
+                <span
+                    style="height:35px; width: 100%; display: flex; padding-top: 10px;justify-content: center; font-size: auto;  background-color: #a7a4a4;">CRITICAL</span>
+
+            </div>
+            <div id="exit">
+                <span
+                    style="height:35px; width: 100%; display: flex; padding-top: 10px;justify-content: center; font-size: auto;  background-color: #a7a4a4;">EXIT</span>
+            </div>
+            <div class="space" id="space"></div>
+
+            <div id="activity">
+                <!-- <div>Process Description</div> -->
+
+                <div id="status">
+                    <ol id="slist">
+
+                    </ol>
+                </div>
+
+                <div class="properties" id="properties">
+                    <form action="" name="Prop" class="Prop">
+                        <table class="tb">
+
+                            <tr>
+                                <td> Mutual Exclusion</td>
+                                <td style="padding-left: 50px;"> <img src="../images/success_img.png" alt=""
+                                        style="border-radius: 50%;"> </td>
+                            </tr>
+
+                            <tr>
+                                <td> Bounded Waiting </td>
+                                <td style="padding-left: 50px;"> <img src="../images/error.png" alt=""
+                                        style="border-radius: 50%;"> </td>
+                            </tr>
+
+                            <tr>
+                                <td> Progress</td>
+                                <td style="padding-left: 50px;"> <img src="../images/success_img.png" alt=""
+                                        style="border-radius: 50%;"> </td>
+                            </tr>
+
+                            <tr>
+                                <td> Deadlock </td>
+                                <td style="padding-left: 50px;"> <img src="../images/error.png" alt=""
+                                        style="border-radius: 50%;"> </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="mutex">
+            <span>&nbsp;&emsp;&emsp;&emsp;&nbsp;</span><span id="val"></span>
+            <div id="start">
+                <button id="strbtn">START</button>
+                <button onclick="window.location.reload()" class="reset" id="reset">RESET</button>
+                <a href="/index.html"><button id="home">HOME</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="peterson.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        function toggleMenu() {
+          var menuToggle = document.querySelector(".toggle");
+          var menu = document.querySelector(".menu");
+          menuToggle.classList.toggle("active");
+          menu.classList.toggle("active");
+        }
+      </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+
+</body>
+
+</html>

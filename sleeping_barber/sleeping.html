@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleeping Barber Algorithm Visualization</title>
+    <link rel="stylesheet" href="sleeping.css">
+    <link rel="icon" href="images/logo1.png" />
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">OS Lab</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#alogorithms" onclick="toggleMenu();">Algorithms</a></li>
+            <li><a href="#team" onclick="toggleMenu();">Team</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <section class="main">
+
+        <div class="form-input" id='chairs_input'>
+            <h1>Enter No. of Chairs in Waiting Room:</h1>
+            <div class>
+                <input type="number" min="0" oninput="this.value = Math.abs(this.value)" id="chairs"
+                    placeholder="Number of chairs">
+                <span></span>
+            </div>
+        </div>
+        <div class="form-input" style="color: white; font-size: 1.5rem ;margin-left: 20px;margin-bottom: 15px;"
+            id="output_ch"> </div>
+
+
+        <div>
+            <button class="btn" onclick="start()">Submit </button>
+            <button class="btn" onclick="window.location.reload()">Reset</button>
+        </div>
+
+        <div class="cust">
+            <div class="addcustomer">
+                <h1>Add Customer</h1>
+            </div>
+
+            <div class="add">
+                <button class="addbutton" id="adding" onclick="buttonClick()" value="0">+</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <h1>Customer(s)</h1>
+                <div class='button' id='c1'></div>
+            </div>
+            <div id="added_customer"></div>
+
+
+
+
+            <div classs="container">
+                <div class="box">
+                    <h1>Customers in Waiting Room</h1>
+                    <div class="button" id='c2'></div>
+                </div>
+                <div id="waiting_customer"></div>
+
+                <div class="container">
+                    <div class="box">
+                        <h1>Customer getting haircut</h1>
+                        <div class='button' id="c3">Barber is sleeping</div>
+                    </div>
+                    <div id="customer_cut"></div>
+
+
+                </div>
+
+                <div class="container">
+                    <div class="box">
+                        <h1>Happy Customer(s)</h1>
+                        <div class='button' id='c4'></div>
+                    </div>
+                    <div id="customer_done"></div>>
+                </div>
+    </section>
+    <script src="sleeping.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        function toggleMenu() {
+            var menuToggle = document.querySelector(".toggle");
+            var menu = document.querySelector(".menu");
+            menuToggle.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

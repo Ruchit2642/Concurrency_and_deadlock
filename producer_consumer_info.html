@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Producer Consumer</title>
+    <link rel="stylesheet" href="producer_consumer_info.css" />
+    <link rel="icon" href="images/logo1.png" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/61820eb66c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Deadlock And Concurrency</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#page_top" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="index.html" onclick="toggleMenu();">Algorithms</a></li>
+        </ul>
+    </header>
+
+    <section class="info" id="page_top">
+        <h1>Producer Consumer</h1>
+        <h2>Introduction:</h2>
+        <p>
+            The Producer-Consumer problem is a classical multi-process synchronization problem, that is we are trying to
+            achieve synchronization between more than one process.There is one Producer in the producer-consumer
+            problem, Producer is producing some items, whereas there is one Consumer that is consuming the items
+            produced by the Producer. The same memory buffer is shared by both producers and consumers which is of
+            fixed-size. The task of the Producer is to produce the item, put it into the memory buffer, and again start
+            producing items. Whereas the task of the Consumer is to consume the item from the memory buffer. <br><br>The
+            problem describes two processes, the producer and the consumer that shares a common fixed-size buffer use it
+            as a queue.
+        <ul>
+            <li>The producer's job is to generate data, put it into the buffer, and start again.</li>
+            <li>At the same time, the consumer is consuming the data (i.e., removing it from the buffer), one piece at a
+                time.</li>
+        </ul>
+        <p>
+            We can solve this problem by using semaphores. here is a fixed size buffer and the producer produces items
+            and enters them into the buffer. The consumer removes the items from the buffer and consumes them. A
+            producer should not produce items into the buffer when the consumer is consuming an item from the buffer and
+            vice versa. So, the buffer should only be accessed by the producer or consumer at a time.</p>
+
+
+        <h2>The solution of Producer-Consumer Problem using Semaphore</h2>
+        <p>The above problems of Producer and Consumer which occurred due to context switch and producing inconsistent
+            result can be solved with the help of semaphores. <br><br>
+            To solve the problem occurred above of race condition, we are going to use <strong>Binary Semaphore and
+                Counting Semaphore</strong>
+            <br><br>
+            <strong> Binary Semaphore : </strong>In Binary Semaphore, only two processes can compete to enter into its
+            <strong> CRITICAL SECTION </strong>at any point in time, apart from this the condition of mutual exclusion
+            is also preserved.
+            <br><br>
+            <strong> Counting Semaphore:</strong> In counting semaphore, more than two processes can compete to enter
+            into its <strong>CRITICAL SECTION </strong> at any point of time apart from this the condition of mutual
+            exclusion is also preserved.
+            <br><br>
+            There are three semaphore variables that we use to solve the problems that occur in the Producer-Consumer
+            problem:
+        <ul>
+            <li>Semaphore S</li>
+            <li>Semaphore E</li>
+            <li>Semaphore F</li>
+        </ul>
+        <p>
+            <strong> Semaphore S :</strong> With the help of the Semaphore 'S' variable, we can achieve mutual exclusion
+            among the processes. By using the Semaphore variable 'S' the producer or consumer can access and use the
+            shared buffer at a specific time. Initially, the value of the Semaphore variable 'S' is set to 1. <br><br>
+            <strong>Semaphore E : </strong> With the help of the Semaphore 'E' variable, we can define the vacant
+            (empty) space in the memory buffer. Initially, the value of the Semaphore 'E' variable is set to 'n' because
+            initially, the memory buffer is empty. <br><br>
+
+            <strong>Semaphore F : </strong> - We use Semaphore 'F' variable to define the filled space, which is filled
+            by the producer. Firstly, we set the value of Semaphore variable 'F' to 0 because in starting, no space is
+            filled by the producer.
+        </p>
+        </p>
+
+    </section>
+
+
+
+    <a href="Producer-Consumer/prodcons.html"><button class="btn">Demo</button></a>
+
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        function toggleMenu() {
+            var menuToggle = document.querySelector(".toggle");
+            var menu = document.querySelector(".menu");
+            menuToggle.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

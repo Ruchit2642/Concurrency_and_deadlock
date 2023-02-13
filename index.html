@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OS Lab Project</title>
+    <link rel="icon" href="images/title_logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/61820eb66c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">OS Lab</a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="menu">
+        <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu();">About</a></li>
+        <li><a href="#alogorithms" onclick="toggleMenu();">Algorithms</a></li>
+        <li><a href="#team" onclick="toggleMenu();">Team</a></li>
+        <li><a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
+      </ul>
+    </header>
+
+    <!-- Section 1 -->
+
+    <section class="banner" id="home"  >
+      <div class="textBx">
+        <h2  data-aos="fade-up" data-aos-duration="4000">
+          Deadlock And <br />
+          <span> Concurrency</span>
+        </h2>
+        <!-- <h3>I'm a Front End web Developer</h3> -->
+        <a href="#about" class="btn" data-aos="fade-up" data-aos-duration="4000">More info</a>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+
+    <section class="about" id="about" data-aos="zoom-in-up" data-aos-duration="20000">
+      <div class="heading">
+        <h2>Brief Explanation</h2>
+      </div>
+      <div class="content">
+        <div class="contentBx w50">
+          <h3>Deadlock And Concurrency</h3>
+          <p>
+            Deadlock describes a situation where two or more threads are blocked
+            forever, waiting for each other. Concurrency means multiple
+            computations are happening at the same time. <br />
+            <br />
+            In concurrent computing, deadlock is any situation in which no
+            member of some group of entities can proceed because each waits for
+            another member, including itself, to take action, such as sending a
+            message or, more commonly, releasing a lock.[1] Deadlocks are a
+            common problem in multiprocessing systems, parallel computing, and
+            distributed systems, because in these contexts systems often use
+            software or hardware locks to arbitrate shared resources and
+            implement process synchronization. <br />
+            <br />
+            Concurrency is the concept of executing two or more tasks at the
+            same time (in parallel). Tasks may include methods (functions),
+            parts of a program, or even other programs. With current computer
+            architectures, support for multiple cores and multiple processors in
+            a single CPU is very common.
+          </p>
+        </div>
+        <div class="w50">
+          <img src="images/deadlock img.png" class="img" alt="image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+
+    <section class="alogorithms" id="alogorithms" data-aos="zoom-in-down" data-aos-duration="20000">
+      <div class="heading white">
+        <h2>Algorithmms</h2>
+        <p>Deadlock And Concurrency</p>
+      </div>
+      <div class="content">
+        <div class="alogorithmsBx">
+          <a href="bankers_algorithm.html">
+          <img src="images/icon1.png" alt="" />
+          <h2>BANKER'S ALGORITHM</h2>
+          <p>
+            Tests for safety by simulating the allocation for predetermined
+            maximum possible amounts of all resources, then makes an “s-state”
+            check to test for possible activities.
+          </p>
+          </a>
+        </div>
+        <div class="alogorithmsBx">
+          <a href="peterson_info.html">
+            <img src="images/icon2.png" alt="" />
+            <h2>PETERSON METHOD</h2>
+            <p>
+              Concurrent programming algorithm for mutual exclusion that allows two or more processes to share a single-use resource without conflict, using only shared memory for communication.
+            </p>
+          </a>
+        </div>
+        <div class="alogorithmsBx">
+          <a href="producer_consumer_info.html">
+            <img src="images/icon3.png" alt="" />
+            <h2>PRODUCER CONSUMER</h2>
+            <p>
+              Synchronization problem. The producer produces items and enters them into the fixed size buffer. The consumer removes the items from the buffer and consumes them.
+            </p>
+          </a>
+        </div>
+        <div class="alogorithmsBx sleep">
+          <a href="sleeping_barber_info.html">
+
+            <img src="images/icon4.1.png" alt="" />
+            <h2>SLEEPING BARBER ALGORITHM</h2>
+            <p>
+              A classic inter-process communication and synchronization problem that illustrates the complexities that arise when there are multiple operating system processes.
+            </p>
+          </a>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Team / Section-4 -->
+
+    <section class="sec" id="team" data-aos="zoom-in-left" data-aos-duration="20000">
+      <div class="content1">
+        <div class="mxw800p">
+          <h3>Meet Our Team</h3>
+          <p>
+            It's about having a personal desire to overcome a challenge, to
+            produce high-quality work, or to interact with team members you like
+            and trust.
+          </p>
+        </div>
+        <div class="teamBx">
+          <div class="member">
+            <div class="imgBX">
+              <img src="#" alt="" />
+            </div>
+            <div class="details">
+              <div>
+                <h2>
+                  Jatin Sharma <br />
+                  <span>20BCP117</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="imgBX">
+              <img src="#" alt="" />
+            </div>
+            <div class="details">
+              <div>
+                <h2>
+                  Naitik Makwana<br />
+                  <span>20BCP121</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="imgBX">
+              <img src="#" alt="" />
+            </div>
+            <div class="details">
+              <div>
+                <h2>
+                 Ruchit Joshi<br />
+                  <span>20BCP138</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="imgBX">
+              <img src="#" alt="" />
+            </div>
+            <div class="details">
+              <div>
+                <h2>
+                  Vyom Mistry<br />
+                  <span>20BCP146</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="imgBX">
+              <img src="#" alt="" />
+            </div>
+            <div class="details">
+              <div>
+                <h2>
+                  Rudraraj<br />
+                  <span>20BCP136</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="member">
+            <div class="imgBX">
+              <img src="#" alt="" />
+            </div>
+            <div class="details">
+              <div>
+                <h2>
+                  Aryan Patel<br />
+                  <span>20BCP128</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+
+    <section class="contact" id="contact" data-aos="zoom-in-right" data-aos-duration="20000">
+      <div class="heading white">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us with a single message</p>
+      </div>
+      <div class="content">
+        <div class="contactInfo">
+          <h3>Contact Info</h3>
+          <div class="contactInfoBx">
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <div class="text">
+                <h3>Address</h3>
+                <p>
+                  Pandit Deendayal Energy University <br />Raysan, Gandhinagar
+                  <br />382421
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="text">
+                <h3>Phone</h3>
+                <p>9758187694</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-envelope-o"></i>
+              </div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>abc@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formBx">
+          <form action="">
+            <h3>Message Us</h3>
+            <input type="text" name="" placeholder="Full Name" />
+            <input type="email" name="" placeholder="Email" />
+            <textarea placeholder="Your Message"></textarea>
+            <input class="btn" type="submit" value="Send" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="copyright">
+      <p>Copyright &#169; 2022 OS Lab project. All Right Reserved.</p>
+    </div>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+    </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+  </body>
+</html>

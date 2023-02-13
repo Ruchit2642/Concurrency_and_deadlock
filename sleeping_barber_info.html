@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banker's Algorithm</title>
+    <link rel="stylesheet" href="sleeping_barber_info.css" />
+    <link rel="icon" href="images/logo1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/61820eb66c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Deadlock And Concurrency</a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="menu">
+        <li><a href="#page_top" onclick="toggleMenu();">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu();">About</a></li>
+        <li><a href="index.html" onclick="toggleMenu();">Algorithms</a></li>
+      </ul>
+    </header>
+
+    <section class="info" id="page_top">
+      <h1>Sleeping Barber Algorithm</h1>
+      <h2>Problem:</h2>
+      <p>
+        The analogy is based upon a hypothetical barber shop with one barber. There is a barber shop which has one barber, one barber chair, and n chairs for waiting for customers if there are any to sit on the chair.
+        <ul>
+            <li>If there is no customer, then the barber sleeps in his own chair.
+            </li>
+            <li>
+                When a customer arrives, he has to wake up the barber.
+            </li>
+            <li>
+                If there are many customers and the barber is cutting a customer’s hair, then the remaining customers either wait if there are empty chairs in the waiting room or they leave if no chairs are empty.
+            </li>
+          </ul>
+      </p>
+
+      <h2>Solution:</h2>
+      <p>For the Barbershop, the monitor provides an environment for the customers and barber to rendezvous </p>
+      <ul>
+        <li>There are four synchronisation conditions: 
+            <ul>
+                <li>Customers have to wait for barber to become available to get a haircut </li>
+                <li>Customers have to wait for barber to open door for them </li>
+                <li>Barber needs to wait for customers to arrive</li>
+                <li>Barber needs to wait for customer to leave</li>
+            </ul>
+        </li>
+        
+    </section>
+
+    
+
+    <a href="sleeping_barber/sleeping.html"><button class="btn">Demo</button></a>
+    
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

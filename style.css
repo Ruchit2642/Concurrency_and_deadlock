@@ -1,0 +1,535 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900,&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif ;
+    scroll-behavior: smooth;
+}
+
+/* Header  */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:40px 100px ;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    background-color: rgb(240, 248, 255);
+    padding:20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+header .logo{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header.sticky .logo{
+    color: #111;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+
+}
+header ul li:hover{
+    transform: scale(1.3);
+}
+.logo:hover{
+    transform: scale(1.3);
+}
+
+header ul li a{
+    position: relative;
+    display: inline-block;
+    margin:0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header.sticky ul li a{
+    color: #111;
+}
+
+
+/* Section 1 */
+
+section{
+    padding: 100px;
+}
+.banner{
+    position: relative;
+    min-height: 100vh;
+    background: url(images/bg-main4.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner h2{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.banner h2 span{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner h3{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+.btn{
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing:2px ;
+    font-weight: 500;
+    border-radius: 50px;
+}
+.btn:hover{
+    background-color: #00b5d8;
+    transform: scale(1.3);
+}
+/* Section 2 */
+
+.heading{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+.about{
+    background-color: rgba(240, 248, 255, 0.877);
+}
+.heading h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.contentBx{
+    padding-right: 65px;
+}
+.contentBx h3{
+    font-size:24px;
+    margin-bottom: 10px;
+}
+.w50{
+    min-width: 50%;
+}
+img{
+    max-width: 90%;
+    padding:7% 0 3% 2% ;
+}
+
+
+/* Section 3 */
+
+.alogorithms{
+    background: #111;
+}
+.alogorithms p{
+    padding-top: 1%;
+}
+.heading.white{
+    color: #fff;
+}
+.alogorithms .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.alogorithms .content .alogorithmsBx{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width:340px ;  /*to change number of algorithms*/
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.alogorithms .content .alogorithmsBx:hover{
+    background: #2196f3;
+    cursor: pointer;
+}
+.alogorithms .content .alogorithmsBx a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.alogorithms .content .alogorithmsBx img{
+    max-width: 70px;
+    filter: invert(1);
+}
+.alogorithms .content .alogorithmsBx h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Section 4 */
+
+.work .content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.work .content .workBx{
+    width: 50%;
+    padding: 20px;
+}
+.work .content .workBx img{
+    max-width: 100%;
+}
+
+#team{
+    background-color: rgba(240, 248, 255, 0.877);
+}
+
+/* Section 4.1 */
+
+.sec{
+    background: #fff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .content1{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mxw800p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.sec .content1 .mxw800p h3{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.sec .content1 .mxw800p p{
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing:1px;
+}
+
+
+.teamBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.teamBx .member{
+    position: relative;
+    background: #000;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.teamBx .member .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.teamBx .member .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.teamBx .member .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: 0.2s;
+    opacity: 0;
+}
+.teamBx .member:hover .details{
+    opacity: 1;
+}
+.teamBx .member .details h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.teamBx .member .details h2 span{
+    display: block;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+
+
+/* Section 5 */
+
+.contact{
+    background: #111;
+}
+.formBx{
+    min-width: 60%;
+}
+.formBx form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formBx form h3,
+.contactInfo h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea{
+
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    background:#222 ;
+    color: #fff;
+    resize: none;
+}
+.formBx form textarea{
+    min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder{
+
+    color:#999 ;
+}
+
+.formBx form input[type = "submit"]{
+    max-width: 100px;
+    background:#2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.contactInfo{
+    min-width: 40%;
+
+}
+.contactInfoBx{
+    position: relative;
+}
+.contactInfoBx .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contactInfoBx .box .icon{
+    min-width: 40px;
+    padding-top:4px ;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    font-size: 24px;
+}
+.contactInfoBx .box  .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactInfoBx .box  .text h3{
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: 0;
+}
+
+
+/* Copyright */
+
+.copyright{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Resposnsive */
+
+@media (max-width:991px){
+
+
+    header,header.sticky{
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    .menu{
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2) ;
+    }
+    .menu.active{
+        left: 0;
+    }
+    header ul li a{
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url(/images/menu.png);
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+
+    }
+    .toggle.active{
+        background: url(/images/close.png);
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    header.sticky .toggle{
+        filter: invert(1);
+    }
+    section{
+        padding: 100px 50px;
+    }
+    .banner{
+        padding: 150px 50px 100px;
+    }
+    .banner h2{
+        font-size: 1.5em;
+    }
+    .banner h3{
+        font-size: 1em;
+    }
+    .btn{
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .heading h2{
+        font-size: 24px;
+    }
+    .contentBx h3{
+        font-size: 20px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .w50{
+        margin-bottom:20px;
+    }
+    .alogorithms .content .alogorithmsBx{
+        margin: 10px;
+    }
+    
+
+    /* This place needs to be think about when adding team members  */
+
+    .work .content .workBx{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contactInfo{
+        margin: 20px 0;
+    }
+
+
+}
+@media (max-width:600px) {
+
+    header,header.sticky{
+        padding: 20px 20px;
+        
+    }
+    .banner{
+        padding: 150px 20px 100px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+}
+
+.alogorithmsBx:hover{
+transform: scale(1.1);
+}

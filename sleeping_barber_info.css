@@ -1,0 +1,134 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900,&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif ;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #111;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:40px 100px ;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    background-color: rgb(240, 248, 255);
+    padding:20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+header .logo{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header.sticky .logo{
+    color: #111;
+}
+header ul{
+    position: relative;
+    display: flex;
+
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+
+}
+
+header ul li a{
+    position: relative;
+    display: inline-block;
+    margin:0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header.sticky ul li a{
+    color: #111;
+    padding: 10px;
+}
+header ul li:hover{
+    transform: scale(1.3);
+}
+.logo:hover{
+    transform: scale(1.3);
+}
+
+
+.btn{
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing:2px ;
+    font-weight: 500;
+    border-radius: 50px;
+}
+.btn:hover{
+    background-color: #00b5d8;
+    transform: scale(1.1);
+}
+
+/* Section 1 */
+
+.info h1{
+    color: #fff;
+    margin: 10% 10% 4% ;
+    font-size: 3em;
+    text-align: center;
+}
+.info h2{
+    color: #fff;
+}
+.info p{
+    color: #fff;
+    padding: 0 3% 0 3%;
+}
+.info  ul li{
+    color: #fff;
+}
+
+.btn{
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    margin-left: 45%;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing:2px ;
+    font-weight: 500;
+    border-radius: 50px;
+}
+.btn:hover{
+    background-color: #00b5d8;
+    cursor: pointer;
+}
